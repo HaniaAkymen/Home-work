@@ -1,0 +1,24 @@
+   0 mkdir -p /opt/group_180423_evening/akymenko
+   1 cd /opt/group_180423_evening/akymenko/
+   2 nano testscript.sh
+
+#!/bin/bash
+ 
+ 
+ echo "your name is" && whoami
+ echo "your working directory is " && pwd
+ echo "Numbers of users: " && ps -ef | wc -l
+ echo "done
+
+   3 bash testscript.sh
+
+your name is
+root
+your working directory is
+/opt/group_180423_evening/akymenko
+Numbers of users:
+34
+
+   4 chmod g-r testscript.sh 
+   5 chmod ugo-x testscript.sh 
+   6 history > history.txt
